@@ -25,9 +25,9 @@ void setup() {
 }
 
 void loop() {
-  int raw = analogRead(sensorPin);    //0-0123
+  int raw = analogRead(sensorPin);    //0-1023
 
-  //if you want to convert to pressure : float voltage raw * (5.0 / 0123.0);
+  //if you want to convert to pressure : float voltage raw * (5.0 / 1023.0);
 
   if (raw > threshold) {
     //alarm

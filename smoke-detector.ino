@@ -14,9 +14,9 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   pinMode(relayPin, OUTPUT);
 
-  digitalWrtie(buzzerPin, LOW)
-  digitalWrtie(ledPin, LOW);
-  digitalWrtie(relayPin, LOW);
+  digitalWrite(buzzerPin, LOW)
+  digitalWrite(ledPin, LOW);
+  digitalWrite(relayPin, LOW);
 
   Serial.begin(9600);
   delay(200);
@@ -28,13 +28,13 @@ void loop() {
   int raw = analogRead(sensorPin);
 
   if (raw > threshold) {
-    digitalWrtie(buzzerPin, HIGH)
-    digitalWrtie(ledPin, HIGH);
-    digitalWrtie(relayPin, HIGH);
+    digitalWrite(buzzerPin, HIGH)
+    digitalWrite(ledPin, HIGH);
+    digitalWrite(relayPin, HIGH);
   } else {
-    digitalWrtie(buzzerPin, LOW)
-    digitalWrtie(ledPin, LOW);
-    digitalWrtie(relayPin, LOW);
+    digitalWrite(buzzerPin, LOW)
+    digitalWrite(ledPin, LOW);
+    digitalWrite(relayPin, LOW);
   }
 
   if (millis() - lastPrint > printInterval) {
